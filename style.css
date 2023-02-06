@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@keyframes background-pan {
+    from {
+      background-position: 0% center;
+    }
+    
+    to {
+      background-position: -200% center;
+    }
+  }
+  
+  @keyframes scale {
+    from, to {
+      transform: scale(0);
+    }
+    
+    50% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    
+    to {
+      transform: rotate(180deg);
+    }
+  }
+:root {
+    --teksti: #dbe5e7;
+    --tausta: rgb(11, 16, 20);
+    --purple: rgb(165, 112, 235);
+    --violet: rgb(135, 69, 151);
+    --pink: rgb(161, 10, 123);
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Source Sans Pro", sans-serif;
+    background-color: var(--tausta);
+    color: var(--teksti);
+}
+main {
+    max-width: 900px;
+    width: 70%;
+    margin: 20px auto;
+    line-height: 1.5em;
+}
+
+section {
+    max-width: 900px;
+    margin: 20px auto;
+    font-size: 1.5em;
+}
+
+header {
+    max-width: 900px;
+    width: 70%;
+    margin: 20px auto;
+
+}
+
+
+
+.otsikko{
+    padding-top: 10px;
+    width: 100%;
+    font-size: 1.7em;
+    line-height: 1.7em;
+    color: white;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 400;
+    margin: 0px;
+    padding: 20px;
+    text-align: center;
+    animation: background-pan 10s linear infinite;
+    background: linear-gradient(
+      to right,
+      var(--purple),
+      var(--violet),
+      var(--pink),
+      var(--purple)
+    );
+
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    position: relative;
+    
+}
+
+
+.toinen_otsikko {
+    font-size: 1.2em;
+    line-height: 1.2em;
+
+}
+
+h1 {
+    color: white;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: clamp(2em, 2vw, 4em);
+    font-weight: 400;
+    margin: 0px;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 > .magic {
+    display: inline-block;
+    position: relative;
+  }
+  
+h1 > .magic > .magic-text {
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(
+      to right,
+      var(--purple),
+      var(--violet),
+      var(--pink),
+      var(--purple)
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+  }
+
+.grade {
+    width: 0%;
+    text-align: right;
+}
+.description {
+    width: 10%;
+    text-align: left;
+    padding-left: 12.5%;
+}
+.loput {
+    width: 10%;
+    text-align: left;
+    padding-left: 22%;
+}
+.hyvat {
+    width: 30%;
+    text-align: left;
+    padding-left: 17%;
+}
+
+.linkit a{
+  color: #78d6e9;
+  text-decoration: none;
+  border: 1px solid #2d6f7c;
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 10px;
+  background-color: #1c252c;
+}
+
+.linkit a:hover{
+  color:rgb(161, 10, 123);
+  background-color: black;
+}
+
+.listat {
+  border-left: var(--pink) solid 2px;
+}
+.gridi {
+  display: grid;
+  grid-template-columns: 0.42fr 1fr;
+  font-size: 1em;
+}
+
+@media only screen and (max-width: 800px){
+  header {
+    display: block;
+    float: none;
+    height: auto;
+    width: 100%;
+    text-align: center;
+  }
+  .otsikko {
+    display: block;
+    position: relative;
+    transform: none;
+    padding-top: 10px;
+    width: 100%;
+    font-size: 1.7em;
+    line-height: 1.7em;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 400;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+  }
+  h1 {
+    font-size: 1em;
+  }
+  .gridi > b {
+    right: 100%;
+    display: block;
+  }
+  .gridi {
+    margin: 0px;
+    padding: 0px; 
+  }
+  main {
+    width: 90%;
+  }
+}
+
